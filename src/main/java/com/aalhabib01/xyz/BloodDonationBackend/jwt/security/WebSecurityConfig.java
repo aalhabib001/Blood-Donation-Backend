@@ -72,7 +72,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.cors().and().csrf().disable().
                 authorizeRequests()
-                .antMatchers("/api/auth/data").access("hasAuthority('DONOR')")
                 .antMatchers("/store/**").permitAll()
                 .antMatchers("/").access("hasAuthority('SUPER_ADMIN')")
                 .antMatchers("/api/auth/user/edit").access("hasAnyAuthority('USER','OWNER')")
