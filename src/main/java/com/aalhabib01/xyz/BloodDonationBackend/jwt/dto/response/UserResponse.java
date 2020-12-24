@@ -17,6 +17,5 @@ public class UserResponse {
     String firstName;
     String lastName;
     String phoneNo;
-    Set<String> role;
 
 }

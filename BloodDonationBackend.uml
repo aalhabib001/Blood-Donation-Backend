@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.aalhabib01.xyz.BloodDonationBackend</OriginalElement>
+  <nodes>
+    <node x="571.5" y="824.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.SignUpForm</node>
+    <node x="0.0" y="944.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.response.JwtResponse</node>
+    <node x="781.5" y="968.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.LoginForm</node>
+    <node x="313.51190476190476" y="1370.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService</node>
+    <node x="215.0" y="990.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.repository.UserRepository</node>
+    <node x="420.25" y="1642.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.controller.AuthController</node>
+    <node x="377.54761904761904" y="0.0">com.aalhabib01.xyz.BloodDonationBackend.jwt.model.User</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.repository.UserRepository">
+      <point x="-50.571428571428555" y="-111.0" />
+      <point x="439.9404761904762" y="1330.0" />
+      <point x="365.5" y="1330.0" />
+      <point x="0.0" y="77.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.repository.UserRepository" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.model.User">
+      <point x="0.0" y="-77.0" />
+      <point x="365.5" y="799.0" />
+      <point x="415.04761904761904" y="799.0" />
+      <point x="-75.0" y="387.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.SignUpForm">
+      <point x="101.14285714285717" y="-111.0" />
+      <point x="591.6547619047619" y="1350.0" />
+      <point x="619.0" y="1350.0" />
+      <point x="-47.5" y="243.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.response.JwtResponse">
+      <point x="-151.71428571428567" y="-111.0" />
+      <point x="338.7976190476191" y="1350.0" />
+      <point x="97.5" y="1350.0" />
+      <point x="0.0" y="123.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.LoginForm">
+      <point x="151.71428571428584" y="-111.0" />
+      <point x="642.2261904761906" y="1350.0" />
+      <point x="827.5" y="1350.0" />
+      <point x="-46.0" y="99.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.model.User">
+      <point x="50.57142857142861" y="-111.0" />
+      <point x="541.0833333333334" y="1350.0" />
+      <point x="549.25" y="1350.0" />
+      <point x="549.25" y="799.0" />
+      <point x="565.047619047619" y="799.0" />
+      <point x="75.0" y="387.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.controller.AuthController" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.SignUpForm">
+      <point x="50.0" y="-75.0" />
+      <point x="670.25" y="1617.0" />
+      <point x="714.0" y="1617.0" />
+      <point x="47.5" y="243.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.controller.AuthController" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.response.JwtResponse">
+      <point x="-150.0" y="-75.0" />
+      <point x="470.25" y="1617.0" />
+      <point x="79.4970238095238" y="1617.0" />
+      <point x="79.4970238095238" y="1350.0" />
+      <point x="32.5" y="1350.0" />
+      <point x="-65.0" y="123.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.controller.AuthController" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.services.SignUpAndSignInService">
+      <point x="-50.0" y="-75.0" />
+      <point x="570.25" y="1617.0" />
+      <point x="490.51190476190476" y="1617.0" />
+      <point x="0.0" y="111.0" />
+    </edge>
+    <edge source="com.aalhabib01.xyz.BloodDonationBackend.jwt.controller.AuthController" target="com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.LoginForm">
+      <point x="150.0" y="-75.0" />
+      <point x="770.25" y="1617.0" />
+      <point x="919.5" y="1617.0" />
+      <point x="46.0" y="99.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="716.5" y="1364.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

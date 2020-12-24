@@ -4,6 +4,7 @@ import com.aalhabib01.xyz.BloodDonationBackend.jwt.Util.RoleUtils;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.LoginForm;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.request.SignUpForm;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.response.JwtResponse;
+import com.aalhabib01.xyz.BloodDonationBackend.jwt.dto.response.UserResponse;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.model.User;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.repository.UserRepository;
 import com.aalhabib01.xyz.BloodDonationBackend.jwt.security.jwt.JwtProvider;
@@ -15,6 +16,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -87,6 +89,35 @@ public class SignUpAndSignInService {
         String jwt = jwtProvider.generateJwtToken(authentication);
 
         return new ResponseEntity<>(new JwtResponse(jwt, roleUtils.getRolesStringFromRole(userOptional.get().getRoles())), HttpStatus.OK);
+    }
+
+    public UserResponse getLoggedAuthUser() {
+
+        Object authUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        if (authUser instanceof UserDetails) {
+            String username = ((UserDetails) authUser).getUsername();
+
+            Optional<User> userOptional = userRepository.findByUsername(username);
+
+            if (userOptional.isPresent()) {
+                User user = userOptional.get();
+
+                UserResponse userResponse = new UserResponse(user.getUsername(), user.getEmail(), user.getFirstName(),
+                        user.getLastName(), user.getPhoneNo());
+
+                return userResponse;
+
+
+            } else {
+
+                return null;
+            }
+
+        } else {
+            return null;
+        }
+
     }
 
 
