@@ -63,4 +63,8 @@ public class User {
     @Email
     private String email;
 
+    private String bloodGroup;
+
+    private String location;
+
 }

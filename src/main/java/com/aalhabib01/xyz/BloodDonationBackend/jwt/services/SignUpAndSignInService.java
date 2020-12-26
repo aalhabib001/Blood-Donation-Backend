@@ -50,6 +50,8 @@ public class SignUpAndSignInService {
         user.setEmail(signUpRequest.getEmail());
         user.setPhoneNo(signUpRequest.getPhoneNo());
         user.setPassword(encoder.encode(signUpRequest.getPassword()));
+        user.setBloodGroup(signUpRequest.getBloodGroup());
+        user.setLocation(signUpRequest.getLocation());
         user.setRoles(roleUtils.getRolesFromStringToRole(signUpRequest.getRole()));
         userRepository.saveAndFlush(user);
 
